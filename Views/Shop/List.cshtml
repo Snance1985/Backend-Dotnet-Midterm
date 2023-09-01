@@ -1,0 +1,32 @@
+@model IEnumerable<midterm_project.Models.Shop>
+
+@{
+    ViewData["Title"] = "See our Dinos";
+}
+
+<div class="resume-wrapper">
+    <h1 class="display-4 list-title">Dino's Dino Shop!</h1>
+
+    @foreach (var shop in Model ?? new List<Shop>())
+    {
+        <div class="shop-summary row">
+            <p class="shop-name col-10">@shop.Name</p>
+            <img src="@shop.ImgUrl" alt="@shop.Name" height="100%" width="100%"/>
+            <div class="col-12">   
+                <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end" asp-controller="Shop" asp-action="Edit" asp-route-id="@shop.ShopId">
+                    Change this Dino!
+                </a>
+                <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end" asp-controller="Shop" asp-action="Detail" asp-route-id="@shop.ShopId">
+                    Look at this Dino!
+                </a>                
+                <a class="btn btn-sm btn-light mb-3 float-end" asp-controller="Shop" asp-action="Delete" asp-route-id="@shop.ShopId">
+                    Delete Dino
+                </a>
+            </div>
+        </div>
+    }
+
+    <div>
+        <a class="btn btn-primary mt-3 float-end" asp-controller="Shop" asp-action="Add">Add A New Dino!</a>
+    </div>
+</div>

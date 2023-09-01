@@ -1,0 +1,40 @@
+@model midterm_project.Models.Shop
+
+<div class="form-group">
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="Name"></label>
+        <input class="form-control col-md-8" asp-for="Name" />
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="Name"></span>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="TypeOfDino"></label>
+        <input class="form-control col-md-8" asp-for="TypeOfDino" />
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="TypeOfDino"></span>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="Description"></label>
+        <textarea class="form-control col-md-8" asp-for="Description"></textarea>
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="Description"></span>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="Price"></label>
+        <input class="form-control col-md-8" asp-for="Price" />
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="Price"></span>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="ImgUrl"></label>
+        <input class="form-control col-md-8" asp-for="ImgUrl"/>
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="ImgUrl"></span>
+        </div>        

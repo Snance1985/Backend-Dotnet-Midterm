@@ -1,0 +1,40 @@
+@model midterm_project.Models.Shop
+
+@{
+    ViewData["Title"] = "Dino Details";
+}
+
+<div class="resume-wrapper">
+    <h1 class="display-4 list-title">Look at this Dino!</h1>
+
+    <div class="form-group">
+        <p>@Model.Name</p>
+    </div>
+
+    <div class="form-group">
+        <P>@Model.TypeOfDino</P>
+    </div>
+
+    <div class="form-group">
+        <P>@Model.Description</P>
+    </div>
+
+    <div class="form-group">
+        <P>@Model.Price</P>
+    </div>
+
+    <div class="form-group">
+        <img src="@Model.ImgUrl" alt="@Model.ImgUrl" height="100%" width="100%" />
+    </div>
+
+
+    <input type="hidden" asp-for="ShopId" />
+    <div class="submit-wrapper">
+        <a class="btn btn-primary mt-3 float-end" asp-controller="Shop" asp-action="Edit">Change this Dino!</a>
+    </div>
+
+    <input type="hidden" asp-for="ShopId" />
+    <div class="submit-wrapper">
+        <a class="btn btn-primary mt-3 float-end" asp-controller="Shop" asp-action="List">Back to all Dinos!</a>
+    </div>
+</div>

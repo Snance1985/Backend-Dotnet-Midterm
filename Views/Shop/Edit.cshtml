@@ -1,0 +1,28 @@
+@model midterm_project.Models.Shop
+
+@{
+    ViewData["Title"] = "Edit Dino";
+}
+
+<div class="resume-wrapper">
+    <form asp-controller="Shop" asp-action="Edit" method="post">
+        <h1 class="display-4 mb-5">Edit Dinos!</h1>
+
+        @await Html.PartialAsync("_ShopInput", Model)
+
+        <input type="hidden" asp-for="ShopId" />
+        <div class="submit-wrapper">
+            <input type="submit" class="" value="Save">
+
+            <input type="hidden" asp-for="ShopId" />
+            <div class="submit-wrapper">
+                <a class="btn btn-sm btn-light mb-3 float-end" asp-controller="Shop" asp-action="Delete">
+                    Delete Dino
+                </a>
+
+                <input type="hidden" asp-for="ShopId" />
+                <div class="submit-wrapper">
+                    <a class="btn btn-light" asp-controller="Shop" asp-action="List">Back to all Dinos!</a>
+                </div>
+    </form>
+</div>
